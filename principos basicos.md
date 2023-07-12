@@ -11,7 +11,14 @@ mas vamos ao que interessa
 
 ### principos e propiedades da execuçao simbolica
 
+algo que precissamos comprender bem eh o seguinte, pra a execuçao simbolica, nosso binario ou code, eh apenas um fluxo de execuçao com diferentes estados (Maquina de turing nao-deterministica), entao, tendo uma ou multiplas entrada, esta pode tomar diferentes caminhos (podemos representar como uma arvores, onde os nós sao fluxos compartivos (`if`|`swhitch`) e cada escolha tomada com base na entrada eh um sub-nó ou folhas dependendo se determinado fluxo termina) 
+isto pra testes de software eh uma maravilha, jah que permite testar as entradas e saidas, alem de testar se determinado nó ou caminho pode resultar em um erro ou bug
 
+*uma das formas existentes de testar isto eh a geraçao aleatoria* na qual testamos dados de entrada aleatorios afim de ver os possiveis caminhos, mas e se quissermos tomar um caminho (ou um conjunto) de fluxos sem sabermos diretamente a entrada?? (ou seja, podemos saber a localizaçao, ou o tipo de dado, mas nao sabemos especificamente os dados de entrada pra tomar o fluxo de caminho que desejarmos)
+
+*eh neste ponto que entra a execuçao simbolica* 
+
+[vou deixar aqui uma referencia em pt que se aprofunda um pouco melhor](
 
 
 
