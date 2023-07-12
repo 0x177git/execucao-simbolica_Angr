@@ -11,14 +11,16 @@ mas vamos ao que interessa
 
 ### principos e propiedades da execuçao simbolica
 
-algo que precissamos comprender bem eh o seguinte, pra a execuçao simbolica, nosso binario ou code, eh apenas um fluxo de execuçao com diferentes estados (Maquina de turing nao-deterministica), entao, tendo uma ou multiplas entrada, esta pode tomar diferentes caminhos (podemos representar como uma arvores, onde os nós sao fluxos compartivos (`if`|`swhitch`) e cada escolha tomada com base na entrada eh um sub-nó ou folhas dependendo se determinado fluxo termina) 
-isto pra testes de software eh uma maravilha, jah que permite testar as entradas e saidas, alem de testar se determinado nó ou caminho pode resultar em um erro ou bug
+algo que precissamos comprender bem eh o seguinte, pra a execuçao simbolica, nosso binario ou code, eh apenas um fluxo de execuçao com diferentes estados (Maquina de turing nao-deterministica), entao, tendo uma ou multiplas entrada, esta pode tomar diferentes caminhos (podemos representar como uma arvores, onde a entrada de usuario ou alguma variavel resultante de uma funçao eh a raiz e nós sao fluxos compartivos (`if`|`swhitch`) entre as condicionais e cada escolha tomada com base na entrada eh um sub-nó ou folhas dependendo se determinado fluxo termina) 
+isto pra testes de software eh uma maravilha, jah que permite testar as entradas esuas possiveis saidas, alem de testar se existem nós ou caminhos que podem resultar em erros ou bug ( ou seja determinar o comortamento de um sistema e se este age como o esperado)
 
-*uma das formas existentes de testar isto eh a geraçao aleatoria* na qual testamos dados de entrada aleatorios afim de ver os possiveis caminhos, mas e se quissermos tomar um caminho (ou um conjunto) de fluxos sem sabermos diretamente a entrada?? (ou seja, podemos saber a localizaçao, ou o tipo de dado, mas nao sabemos especificamente os dados de entrada pra tomar o fluxo de caminho que desejarmos)
+* *uma das formas existentes de testar isto eh a geraçao aleatoria* na qual testamos dados de entrada aleatorios afim de ver os possiveis caminhos, mas e se quissermos tomar um caminho (ou um conjunto) de fluxos sem sabermos diretamente a entrada?? (ou seja, podemos saber a localizaçao, ou o tipo de dado, mas nao sabemos especificamente os dados de entrada pra tomar o fluxo de caminho que desejarmos)
 
-*eh neste ponto que entra a execuçao simbolica* 
+* *eh neste ponto que entra a execuçao simbolica* tendo este fluxo de caminhos e sabendo que existe determinado conjunto de caminhos que desejarmos testar, podemos atraves desta tenica injetar valores simbolicos pra adentrarnos dentro de determinado fluxo
 
-[vou deixar aqui uma referencia em pt que se aprofunda um pouco melhor](
+vou deixar um grafico aqui pra ficar melhor de esclarecer, jah que aqui começa a se tornar um pouco abstrato 
+
+
 
 
 
