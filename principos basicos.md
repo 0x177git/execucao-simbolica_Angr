@@ -18,23 +18,43 @@ isto pra testes de software eh uma maravilha, jah que permite testar as entradas
 
 * *eh neste ponto que entra a execuçao simbolica* tendo este fluxo de caminhos e sabendo que existe determinado conjunto de caminhos que desejarmos testar, podemos atraves desta tenica injetar valores simbolicos pra adentrarnos dentro de determinado fluxo
 
-vou deixar um grafico aqui pra ficar melhor de esclarecer, jah que aqui começa a se tornar um pouco abstrato 
+[Arvix (A Survey of Symbolic Execution Techniques) ref.2](https://arxiv.org/pdf/1610.00502.pdf)
+
+
+### vou deixar um grafico aqui pra ficar melhor de esclarecer, jah que aqui começa a se tornar um pouco abstrato 
 
 ![arvore-binaria incompleta](https://github.com/exoForce01/execucao-simbolica_Angr/blob/main/binary-tree.png?raw=true)
-temos aqui uma arvore binaria (lembrando que esta eh apenas uma representaçao, *radare2* veremos como grafos por exemplo)
+
+temos aqui uma arvore binaria (lembrando que esta eh apenas uma representaçao, em *radare2* veremos como grafos por exemplo)
 
 * a nossa raiz (1) seria uma entrada de usuario ou variavel na qual este segmento ou funçao ira executar comparaçoes pra trazer diferentes resultados
 então, imaginemos que desejamos tomar o seguinte fluxo (caminho)
-* queremos passar pelo sub-nó (2)
+* queremos passar pela sub-arvore (2)
 *  dps pelo sub-nó (4)
 *  afim de chegar na folha (saida) (8)
 
 o que a nossa *execuçao simbolica* projetaria fazer seria inserir os simbolos necessarios pra executarmos o caminho (2 -> 4 -> 8), a diferença por exemplo da geraçao pseudo-aleatoria que iria testar varios caminhos atraves de entradas aleatorias (que vem de um dominio)
 
-as vnta
+as vantagens disto em comparaçao de outras tipos de teste seriam 
+
+* podemos escolher um ou varios conjuntos de caminhos, podemos analisar atraves de um controle de fluxo mais preciso e especifico, e atraves de pontos de controle podemos verificar os simbolos inseridos pra adentrarmos de determinado fluxo (nó)
+
+porem ha algums coisas que precisso comentar, e eh que demasiados conjuntos de caminhos poderiam dar tempos de respotas literalmente maiores que a idade do universo, alem de que a execuçao simbolica nao diferencia entre resultados de erro e caminhos que se tornam inviaveis por adentrar-se em funçoes ou fluxos nao esperados
+
+> [Resumo de alguns pontos, ref.1](https://www.tutorialspoint.com/software_testing_dictionary/symbolic_execution.htm)
+
+*assim precisamos a principo conhecer os fluxos de comparaçoes a fim de evitar estes problemas e evitar aplicar este tipo de metodo em fluxos exageradamente grandes*
+  
+### exemplo rapido 
+
+![reversing in binary](https://github.com/exoForce01/execucao-simbolica_Angr/assets/138733317/214852da-bdaa-466e-a178-9b20e759b572)
+
+se vc jah conhece um pouco a sintaxe do *radare 2* jah deve ter entendido o que acontece aqui, mas vamos lah, temos aqui uma binario que iremos chamar de *_crackme_*
+
+temos a principo uma comparaçao de tamanho, no qual recebemos uma variavel que eh o resultado da saida de uma funçao 
+```
+if (iVar2 == 0x20) {        #iVar2 eh um inteiro que recebe o tamanho do noss input
+```
+aqui podemos definir esta como a primeira comparaço, ou melhor como a sub-arvore do nosso pedaço de code, na qual comparamos o tamanho e se este eh igual a 0x20(3
 
 
-
-
-
-[source](https://arxiv.org/pdf/1610.00502.pdf)
