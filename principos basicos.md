@@ -1,4 +1,4 @@
-# Uma breve explicaçao do que eh a execuçao simbolica
+# Uma breve explicaçao sobre o que eh a execuçao simbolica
 ## execuçao abstrata
 a nossa queridissima execuçao simbolica nasceu a principio como uma forma de execuçao abstrata (basicamente um tipo de execuçao ou interpretaçao na qual podemos controlar o fluxo de dados e o fluxo de execuçao) 
 a qual nos permite analisar o fluxograma de algum tipo de execuçao
@@ -11,12 +11,12 @@ mas vamos ao que interessa
 
 ### principos e propiedades da execuçao simbolica
 
-algo que precissamos comprender bem eh o seguinte, pra a execuçao simbolica, nosso binario ou code, eh apenas um fluxo de execuçao com diferentes estados (Maquina de turing nao-deterministica), entao, tendo uma ou multiplas entrada, esta pode tomar diferentes caminhos (podemos representar como uma arvores, onde a entrada de usuario ou alguma variavel resultante de uma funçao eh a raiz e nós sao fluxos compartivos (`if`|`swhitch`) entre as condicionais e cada escolha tomada com base na entrada eh um sub-nó ou folhas dependendo se determinado fluxo termina) 
-isto pra testes de software eh uma maravilha, jah que permite testar as entradas esuas possiveis saidas, alem de testar se existem nós ou caminhos que podem resultar em erros ou bug ( ou seja determinar o comortamento de um sistema e se este age como o esperado)
+algo que precissamos comprender bem eh o seguinte, pra a execuçao simbolica, nosso binario ou code, eh apenas um fluxo de execuçao com diferentes estados (*Maquina de turing nao-deterministica*), entao, tendo uma ou multiplas entrada, esta pode tomar diferentes caminhos (podemos representar como uma arvore, onde a entrada de usuario ou alguma variavel resultante de uma funçao eh a raiz e nós sao fluxos compartivos (`if`|`swhitch`) entre as condicionais e cada escolha tomada com base na entrada eh um sub-nó ou folhas) 
+isto pra testes de software eh uma maravilha, jah que permite testar as entradas e suas possiveis saidas, alem de testar se existem nós ou caminhos que podem resultar em erros ou bug ( ou seja determinar o comportamento de um sistema e se este age como o esperado)
 
 * *uma das formas existentes de testar isto eh a geraçao pseudo-aleatoria* na qual testamos dados de entrada aleatorios afim de ver os possiveis caminhos, mas e se quissermos tomar um caminho (ou um conjunto) de fluxos sem sabermos diretamente a entrada?? (ou seja, podemos saber a localizaçao, ou o tipo de dado, mas nao sabemos especificamente os dados de entrada pra tomar o fluxo de caminho que desejarmos)
 
-* *eh neste ponto que entra a execuçao simbolica* tendo este fluxo de caminhos e sabendo que existe determinado conjunto de caminhos que desejarmos testar, podemos atraves desta tenica injetar valores simbolicos pra adentrarnos dentro de determinado fluxo
+* *eh neste ponto que entra a execuçao simbolica* tendo este fluxo de caminhos e sabendo que existe determinado conjunto de caminhos que desejarmos testar, podemos atraves desta tecnica injetar valores simbolicos pra adentrarnos dentro de determinado fluxo
 
 > [Arvix (A Survey of Symbolic Execution Techniques) ref.2](https://arxiv.org/pdf/1610.00502.pdf)
 
