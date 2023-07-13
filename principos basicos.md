@@ -18,7 +18,9 @@ isto pra testes de software eh uma maravilha, jah que permite testar as entradas
 
 * *eh neste ponto que entra a execuçao simbolica* tendo este fluxo de caminhos e sabendo que existe determinado conjunto de caminhos que desejarmos testar, podemos atraves desta tenica injetar valores simbolicos pra adentrarnos dentro de determinado fluxo
 
-[Arvix (A Survey of Symbolic Execution Techniques) ref.2](https://arxiv.org/pdf/1610.00502.pdf)
+> [Arvix (A Survey of Symbolic Execution Techniques) ref.2](https://arxiv.org/pdf/1610.00502.pdf)
+
+
 
 
 ### vou deixar um grafico aqui pra ficar melhor de esclarecer, jah que aqui começa a se tornar um pouco abstrato 
@@ -41,7 +43,7 @@ as vantagens disto em comparaçao de outras tipos de teste seriam
 
 porem ha algums coisas que precisso comentar, e eh que demasiados conjuntos de caminhos poderiam dar tempos de respotas literalmente maiores que a idade do universo, alem de que a execuçao simbolica nao diferencia entre resultados de erro e caminhos que se tornam inviaveis por adentrar-se em funçoes ou fluxos nao esperados
 
-> [Resumo de alguns pontos, ref.1](https://www.tutorialspoint.com/software_testing_dictionary/symbolic_execution.htm)
+> * [Resumo de alguns pontos, ref.1](https://www.tutorialspoint.com/software_testing_dictionary/symbolic_execution.htm)
 
 *assim precisamos a principo conhecer os fluxos de comparaçoes a fim de evitar estes problemas e evitar aplicar este tipo de metodo em fluxos exageradamente grandes*
   
@@ -61,6 +63,9 @@ logo dps temos um pedaço no qual chamamos o `argv` ou seja a entrada do usuario
 
         em um mundo onde nossos modelos abstratos de teste nao existem, teriamos que resolver atraves de analise estatico condicional por condicional
 
-porem jah conhecendo a teoria da nossa execuçao simbolica, sabemos que existe uma teoria de execuçao abstrata (*modelo de teste*)
+porem jah conhecendo a teoria da nossa execuçao simbolica, sabemos que existe uma teoria de execuçao abstrata (**_modelo de teste_**) com a qual podemos direccionar um conjunto de caminhos a fim de atingir um resultado especifico (*_em nossa represantaçao de arvore binaria, podemos imaginar como a folha (8)_*), neste caso, atraves de entradas simbolicas durante os teste comparativos 
+
+## sabendo a mecanica de execuçao simbolica, as propiedades que precisamos, o conjunto de caminhos que precisamos atingir e os que precisamos evitar, podemos entao ir pra a segunda parte 
+eu apresento a vcs, [**Angr**](https://angr.io/) um framework de analise estatica e motor de execuçao simbolica criado em python na universidade santa monica, vamos lah implementar o que acabamos de conhecer aqui??
 
 
