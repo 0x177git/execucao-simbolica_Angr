@@ -55,6 +55,12 @@ temos a principo uma comparaçao de tamanho, no qual recebemos uma variavel que 
 ```
 if (iVar2 == 0x20) {        #iVar2 eh um inteiro que recebe o tamanho do noss input
 ```
-aqui podemos definir esta como a primeira comparaço, ou melhor como a sub-arvore do nosso pedaço de code, na qual comparamos o tamanho e se este eh igual a 0x20(3
+aqui podemos definir esta como a primeira comparaço, ou melhor como a sub-arvore do nosso pedaço de code, na qual comparamos o tamanho e se este eh igual a hex(0x20(31 bytes)) ou seja se nosso *array* possui 31 elementos e retorna _True_
+
+logo dps temos um pedaço no qual chamamos o `argv` ou seja a entrada do usuario dentro da `pcVar1` e dps eh que começa os nossos kaoticos (com _k_ msm) condicionais comparativos, onde ocorrem 31 fluxos condicionais e se a entrada e saida das operaçoes em _stack_ forem iguais nos 31 elementos, este ira nós retornas a mensagem **license correct** que eh o que queremos
+
+        em um mundo onde nossos modelos abstratos de teste nao existem, teriamos que resolver atraves de analise estatico condicional por condicional
+
+porem jah conhecendo a teoria da nossa execuçao simbolica, sabemos que existe uma teoria de execuçao abstrata (*modelo de teste*)
 
 
